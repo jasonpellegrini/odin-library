@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <h1>myLibrary</h1>
+    </div>
+
+    <button data-popup-target="#popup" id="addBookBtn">+ Add Book</button>
+
+    <div class="popup" id="popup">
+        <div>
+            <div class="popupHeader">
+                <h2>Add new book</h2>
+                <button data-close-button id="close-button" class="close-button">&times;</button>
+            </div>
+            <div class="popupBody">
+               <form onsubmit="takeValue()" id="newBookForm">
+                <label id="nameField">
+                    <input id="bookTitle" type="text" name="nameField" placeholder="Book title" required />
+                </label>
+                <label id="authorField">
+                    <input id="bookAuthor" type="text" name="authorField" placeholder="Author" required />
+                </label>
+                <label id="pagesField">
+                    <input id="bookPages" type="number" name="pagesField" placeholder="Number" required />
+                </label>
+                <label for="checkField" id="readField"> Have you read it?</label> 
+                    <input id="bookRead" type="checkbox" name="checkField"/>
+                <input type="submit">
+               </form> 
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+    
+
+    <div id="mainContainer">
+
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
